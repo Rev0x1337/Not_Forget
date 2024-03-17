@@ -24,11 +24,11 @@ movl $0x20, %eax     # number 0x20 -> eax, AT&T.
 _________________________________________________
 
 mov eax, dword [0x404010]     ; Move 4 bytes (dword) to
-                                eax from memory at address 0x404010. Intel.
+                              ;  eax from memory at address 0x404010. Intel.
 movl 0x404010, %eax           # Move 4 bytes (dword) to
                                 eax from memory at address 0x404010. AT&T.
 mov eax, dword [variable]     ; Move 4 bytes (dword) to
-                                eax from memory at the address of variable. Intel.
+                              ;  eax from memory at the address of variable. Intel.
 movl variable, %eax           # Move 4 bytes (dword) to
                                 eax from memory at the address of variable. AT&T.
 _________________________________________________
@@ -40,11 +40,11 @@ es:0x1a       ; Intel
 _________________________________________________
 
 mov eax, [edx]               ; Move 4 bytes (dword) to eax from memory
-                              at the address from edx. Intel.
+                             ;at the address from edx. Intel.
 movl (%edx), %eax            # Move 4 bytes (dword) to eax from memory
                               at the address from edx. AT&T.
 add eax, [edx+ebx*4-30]                 ; Add data from memory to eax
-                                        at the address, which is calculated as follows: edx+ebx*4-30. Intel.
+                                        ; at the address, which is calculated as follows: edx+ebx*4-30. Intel.
 addl -30(%edx, %ebx, 4), %eax           # Add data from memory to eax
                                         at the address, which is calculated as follows: edx+ebx*4-30. AT&T.
 _________________________________________________
